@@ -1,8 +1,12 @@
 <html>
 <head>
-<script Language="JavaScript"  src="script.js">
-</script>
-<body><input type="number" id="form_id">
+<script Language="JavaScript"  src="script.js"></script>
+<!--<link href="style.css" rel="stylesheet" type="text/css">-->
+<?
+$counter=file("Number.txt");
+$number=$counter[0]+0;
+?>
+<body><input type="hidden" id="form_id" value="<?echo $number?>">
 <input type="button" onClick="get_survey_form('form_id','form_div')" value="Получить"/>
 <div id="form_div">вот сюда</div>
 </body>
